@@ -14,8 +14,14 @@ function lineThroughFirstChildOfUl(){
     const child = document.querySelector("#arguments").firstChild.innerHTML;
     child.style.textDecoration = "line-through";
 }
+
+// function lineThroughFirstChildOfUl(){
+//     const firstItem = document.querySelector("ul li");
+
+// }
 // 4. Now use it! The first list item should get what's known as a "strikethrough" style.
 lineThroughFirstChildOfUl();
+
 // 5. Write a function that always removes the last `<li>` from the Arguments `<ul>`  (try looking up "last child" and "remove node").
 function removesLastChildOfUl(){
     const child = document.querySelector("#arguments").lastChild.innerHTML;
@@ -33,13 +39,13 @@ function appendUl(element){
 
 // 2. Let's use it! Create an image element and pass it into your function. (Note that a <ul> doesn't HAVE to have an `<li>` as its only children! Though ideally it should...) You'll know you've succeeded when the image shows up under at the end of Arguments.
 const image = document.createElement("IMG");
-const imageUrl = image.src = "https://i.pinimg.com/originals/cb/33/49/cb3349b86ca661ca61ae9a36d88d70d4.png";
-appendUl(imageUrl);
+image.src = "https://i.pinimg.com/originals/cb/33/49/cb3349b86ca661ca61ae9a36d88d70d4.png";
+appendUl(image);
 
 // 3. Write a function that takes in an image element and makes its height 30 pixels.
 function image30(imgElement){
     const image = document.querySelector(imgElement)
-    image.height = '30px';
+    image.style.height = '30px';
 }
 // 4. Let's use it. Query and then pass in to the function one of the images in the Image Area. It should become a small 30-pixel image.
 image30("#image-1");
